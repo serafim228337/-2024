@@ -1,9 +1,13 @@
 def balance(s):
     count = 0
     for char in s:
-        if char == "+":
+        if char == "(":
             count += 1
-        elif char == "-":
+        elif char == ")":
             count -= 1
-    return count
-print(balance("++-+"))
+            if count < 0:
+                return False
+    return count == 0
+
+
+print(balance("()"))

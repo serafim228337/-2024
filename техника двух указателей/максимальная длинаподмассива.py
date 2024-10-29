@@ -10,7 +10,6 @@ def max_unique_subarray_sum(nums, K, L):
         while right - left < K or right - left > L:
             if right - left < K:
                 right += 1
-
             else:
                 if nums[left] in seen:
                     seen.remove(nums[left])
@@ -37,4 +36,4 @@ K = 2
 L = 3
 
 max_sum = max_unique_subarray_sum(nums, K, L)
-print(max_sum)  # Вывод: 20 (подмассив [3, 4, 5, 6, 7])
+print(max_sum)
